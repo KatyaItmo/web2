@@ -1,0 +1,462 @@
+:root {
+    /* Основные фоны */
+    --bg-dark: #1a181a;
+    --bg-card: #2a2825;
+    
+    /* Границы */
+    --border-block: #3a3835;
+    --border-element: #6a5a5a;
+    --border-focus: #c8a8a8;
+    
+    /* Фоны элементов */
+    --bg-button: #3a2a2a;
+    --bg-button-hover: #4a3a3a;
+    
+    /* Цвета состояний */
+    --color-success: #88c8a8;
+    --color-error: #c88a8a;
+    
+    /* Текст */
+    --text-heading: #e8c8c8;
+    --text-primary: #d8d0d0;
+    --text-secondary: #b8a8a8;
+    
+    /* Акцентные цвета */
+    --accent-blue: #d8a8b8;
+    --accent-blue-hover: #e8b8c8;
+    
+    /* Радиус для границ */
+    --border-radius: 10px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#page-container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 20px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+
+#header {
+    padding: 32px 0;
+    margin-bottom: 32px;
+    border-bottom: 3px solid var(--border-element);
+    text-align: center;
+}
+
+.meme-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.meme {
+    width: 120px;
+    height: 120px;
+}
+
+#header-content {
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+#header-content h1 {
+    margin-bottom: 16px;
+    color: var(--text-heading);
+    font-size: 36px;
+}
+
+.student-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 16px;
+}
+
+.info-item {
+    color: var(--text-secondary);
+}
+
+
+#main-content {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+    align-items: flex-start;
+}
+
+#input-section {
+    flex: 0 0 37%;
+}
+
+#result-section {
+    flex: 1;
+}
+
+.content-block {
+    padding: 24px;
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-block);
+}
+
+.content-block h2 {
+    margin-bottom: 24px;
+    color: var(--text-heading);
+    font-size: 28px;
+    text-align: center;
+}
+
+.form-row {
+    margin-bottom: 24px;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-heading);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.input-description {
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.text-input {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: var(--bg-dark);
+    border: 2px solid var(--border-element);
+    border-radius: var(--border-radius);
+    color: var(--text-primary);
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+}
+
+.text-input:focus {
+    outline: none;
+    border-color: var(--border-focus);
+}
+
+.button-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.y-btn {
+    padding: 12px 8px;
+    background-color: var(--bg-button);
+    border: 2px solid var(--border-element);
+    border-radius: var(--border-radius);
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.y-btn:hover {
+    background-color: var(--bg-button-hover);
+    border-color: var(--border-focus);
+}
+
+.y-btn.active {
+    background-color: var(--accent-blue);
+    border-color: var(--border-focus);
+    color: var(--bg-dark);
+    font-weight: bold;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-element);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.checkbox-row:hover {
+    border-color: var(--border-focus);
+}
+
+.checkbox-input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--accent-blue);
+}
+
+.checkbox-label {
+    color: var(--text-primary);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--accent-blue);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--bg-dark);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+}
+
+.submit-button:hover {
+    background-color: var(--accent-blue-hover);
+    transform: translateY(-2px);
+}
+
+
+#graph-section {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+#coordinate-plane {
+    border: 2px solid var(--border-element);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-dark);
+    display: block;
+    margin: 0 auto;
+}
+
+
+#table-container {
+    overflow-x: auto;
+    border: 2px solid var(--border-element);
+    border-radius: var(--border-radius);
+    margin-bottom: 24px;
+    background-color: var(--bg-dark);
+}
+
+#result-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#result-table th {
+    padding: 16px;
+    text-align: center;
+    border: 1px solid var(--border-element);
+    background-color: var(--bg-card);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-heading);
+}
+
+#result-table td {
+    padding: 12px;
+    text-align: center;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-element);
+    font-size: 14px;
+}
+
+#result-table td.result-hit {
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+#result-table td.result-miss {
+    color: var(--color-error);
+    font-weight: bold;
+}
+
+.results-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.control-left, .control-right {
+    flex: none;
+}
+
+.clear_meme {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    order: 1;
+}
+
+.clear-button {
+    order: 2;
+    padding: 12px 24px;
+    background-color: var(--color-error);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--bg-dark);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clear-button:hover {
+    background-color: #d8a8a8;
+    transform: translateY(-2px);
+}
+
+.navigation-links {
+    margin-top: 24px;
+    text-align: center;
+}
+
+
+.back-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--bg-button);
+    color: var(--text-primary);
+    border: 2px solid var(--border-element);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: var(--bg-button-hover);
+    border-color: var(--border-focus);
+    color: var(--text-heading);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+
+#footer {
+    padding: 24px;
+    background-color: var(--bg-button);
+    border-top: 3px solid var(--border-element);
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: auto;
+}
+
+
+.error-message {
+    background-color: var(--color-error);
+    color: var(--text-primary);
+    padding: 16px;
+    border-radius: var(--border-radius);
+    margin: 20px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+@media (max-width: 1024px) {
+    #main-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    #input-section, #result-section {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .meme-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .meme {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .student-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    #header-content h1 {
+        font-size: 28px;
+    }
+    
+    .content-block {
+        padding: 16px;
+    }
+    
+    .button-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .results-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .control-left, .control-right {
+        text-align: center;
+    }
+    
+    #result-table th,
+    #result-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-group {
+        grid-template-columns: 1fr;
+    }
+    
+    #page-container {
+        padding: 0 10px;
+    }
+    
+    .content-block {
+        padding: 12px;
+    }
+}

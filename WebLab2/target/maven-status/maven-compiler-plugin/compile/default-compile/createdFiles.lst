@@ -1,0 +1,5 @@
+com\example\servlets\ControllerServlet.class
+com\example\model\Point.class
+com\example\servlets\AreaCheckServlet.class
+com\example\utils\ResultsStorage.class
+com\example\utils\AreaChecker.class
